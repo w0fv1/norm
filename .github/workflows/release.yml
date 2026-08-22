@@ -193,7 +193,7 @@ jobs:
         run: npm ci --prefix tool/cli/extensions/vscode
 
       - name: Download native CLIs
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           path: binaries
           pattern: native-*
@@ -233,14 +233,14 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Download release assets
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           path: release
           pattern: release-*
           merge-multiple: true
 
       - name: Download universal extension
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           path: release
           name: extension-universal
